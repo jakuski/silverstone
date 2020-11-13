@@ -1,0 +1,24 @@
+{
+	"compilerOptions": {
+		"lib": [
+			"ESNext",
+			"DOM",
+			"DOM.Iterable"
+		],
+		"noEmit": true,
+		"target": "esnext",
+		"moduleResolution": "node",
+		"allowSyntheticDefaultImports": true,
+		"jsx": "react",
+		"resolveJsonModule": true,
+		"skipLibCheck": true
+	},
+	"include": [
+		"src",
+		"types.d.ts"
+	],
+	"exclude": [
+		"dist",
+		"node_modules"
+	]
+}
