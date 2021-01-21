@@ -3,24 +3,28 @@ const pkg = require("./package.json");
 
 const cwd = process.cwd();
 
-// Folder Names
+// Root Folder Names
 const srcFolder = "src";
+// Src folder names
 const mainFolder = "main";
 const rendererFolder = "renderer";
 const preloadFolder = "preload";
+
 const distFolder = "dist";
 
 module.exports = {
-	output: {
-		filenames: {
-			main: "main.js",
-			renderer: "renderer.js",
-			preload: "preload.js",
-			rendererHTML: "renderer.mount.html"
-		}
+	outputFilenames: {
+		// folder for these is located in config.paths.dist
+		main: "main.js",
+		renderer: "renderer.js",
+		preload: "preload.js",
+		rendererHTML: "renderer.mount.html",
+		webScripts: "scripts.js",
+		webHTML: "index.html"
 	},
 	misc: {
 		// The ID that is used to mount the react app.
+		// If you want to change the element type, edit src/renderer_mount.html
 		reactRootId: "app-mount",
 		// lodash template parameters used in renderer mount html
 		htmlTemplateParams: {
@@ -37,7 +41,6 @@ module.exports = {
 		dist: {
 			app: resolve(cwd, distFolder, "app"),
 			web: resolve(cwd, distFolder, "web"),
-		},
-		rendererMountHtml: resolve(cwd, srcFolder, "renderer_mount.html")
+		}
 	},
 }

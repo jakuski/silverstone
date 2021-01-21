@@ -1,3 +1,13 @@
+# Built files
+dist/*/*.js
+dist/*/*.map
+dist/*/*.txt
+dist/*/*.html
+
+# Mac bs
+**/.DS_Store
+.DS_Store
+
 # Logs
 logs
 *.log
@@ -42,4 +52,4 @@ typings/
 
 # dotenv environment variables file
 .env
-.env.test
+.env.*

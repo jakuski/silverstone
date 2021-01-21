@@ -2,22 +2,48 @@
   "name": "silverstone-app",
   "version": "1.0.0",
   "description": "App bootstrapped with silverstone boilerplate (https://github.com/jakuski/silverstone)",
-  "main": "index.js",
+  "main": "dist/app/main.js",
   "repository": "https://github.com/jakuski/silverstone",
   "author": "jakuski",
   "license": "MIT",
   "private": false,
+  "engines": {
+    "node": ">=12.13.0"
+  },
+  "scripts": {
+    "start": "electron .",
+    "build": "node silverstone-scripts build",
+    "start-web": "node silverstone-scripts start-web",
+    "cli-test": "node silverstone-scripts/cli/p-test",
+    "__do_not_use_exec_build__": "node silverstone-scripts/cmds/build/exec_build.js"
+  },
   "dependencies": {
     "electron": "^10.1.5",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "tailwindcss": "^2.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/preset-react": "^7.12.10",
+    "@babel/preset-typescript": "^7.12.7",
     "@types/react": "^16.9.56",
     "@types/react-dom": "^16.9.9",
+    "autoprefixer": "^10.1.0",
     "babel-loader": "^8.2.1",
-    "html-webpack-plugin": "^5.0.0-alpha.14",
+    "chalk": "^4.1.0",
+    "concurrently": "^5.3.0",
+    "css-loader": "^5.0.1",
+    "fibers": "^5.0.0",
+    "html-webpack-plugin": "^5.0.0-beta.5",
+    "minimist": "^1.2.5",
+    "open": "^7.3.1",
+    "postcss": "^8.2.2",
+    "postcss-loader": "^4.1.0",
+    "sass": "^1.32.5",
+    "sass-loader": "^10.1.1",
+    "style-loader": "^2.0.0",
     "typescript": "^4.0.5",
     "webpack": "^5.4.0",
     "webpack-merge": "^5.4.0"

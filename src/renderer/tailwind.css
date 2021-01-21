@@ -1,0 +1,8 @@
+/*
+I prefer using the @import installation of tailwindcss instead of the @\tailwind method as that causes vscode
+to throw syntax errors.
+*/
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
